@@ -1,65 +1,229 @@
-import Image from "next/image";
+import Sidebar from '@/components/Sidebar';
+import ProductCard from '@/components/ProductCard';
+import NewsCarousel from '@/components/NewsCarousel';
+import { ChevronRight } from 'lucide-react';
+import Link from 'next/link';
+import { prisma } from '@/lib/prisma';
 
-export default function Home() {
+// Force dynamic rendering to always fetch fresh data
+export const dynamic = 'force-dynamic';
+
+// Interface for product from database
+interface Product {
+  id: string;
+  name: string;
+  slug: string;
+  price: number;
+  comparePrice: number | null;
+  images: string[];
+  featured: boolean;
+  createdAt: Date;
+  category: {
+    id: string;
+    name: string;
+    slug: string;
+  } | null;
+}
+
+// Fetch products directly from database
+async function getProducts(): Promise<Product[]> {
+  try {
+    const products = await prisma.product.findMany({
+      where: { isActive: true },
+      include: {
+        category: {
+          select: {
+            id: true,
+            name: true,
+            slug: true
+          }
+        }
+      },
+      orderBy: { createdAt: 'desc' },
+      take: 50
+    });
+
+    // Convert Decimal to number for serialization
+    return products.map(p => ({
+      ...p,
+      price: Number(p.price),
+      comparePrice: p.comparePrice ? Number(p.comparePrice) : null,
+    }));
+  } catch (error) {
+    console.error('Error fetching products:', error);
+    return [];
+  }
+}
+
+// Transform product for ProductCard component
+function transformProduct(product: Product) {
+  const price = product.price;
+  const comparePrice = product.comparePrice || 0;
+  const hasDiscount = comparePrice > price;
+
+  const salePercentage = hasDiscount
+    ? Math.round(((comparePrice - price) / comparePrice) * 100)
+    : 0;
+
+  // Determine badge based on product attributes
+  let badge: 'hot' | 'new' | 'sale' | undefined;
+  if (product.featured) {
+    badge = 'hot';
+  } else if (new Date(product.createdAt) > new Date(Date.now() - 7 * 24 * 60 * 60 * 1000)) {
+    badge = 'new'; // Products created within last 7 days
+  }
+
+  return {
+    id: product.id,
+    name: product.name,
+    price: product.comparePrice || product.price,
+    discountPrice: hasDiscount ? product.price : undefined,
+    image: product.images?.[0] || '/images/placeholder.jpg',
+    badge,
+    salePercentage: salePercentage > 0 ? salePercentage : undefined,
+    slug: product.slug,
+  };
+}
+
+// Client Component wrapper for sidebar interaction
+import HomepageClient from './HomepageClient';
+
+export default async function Home() {
+  // Fetch data on server
+  const products = await getProducts();
+
+  // Filter products
+  const hotProducts = products.filter(p => p.featured).slice(0, 10);
+  const newProducts = products
+    .filter(p => new Date(p.createdAt) > new Date(Date.now() - 7 * 24 * 60 * 60 * 1000))
+    .slice(0, 10);
+  const saleProducts = products
+    .filter(p => p.comparePrice && p.comparePrice > p.price)
+    .slice(0, 10);
+  const allProducts = products.slice(0, 10);
+
+  // Transform products for cards
+  const transformedHotProducts = hotProducts.map(transformProduct);
+  const transformedNewProducts = newProducts.map(transformProduct);
+  const transformedSaleProducts = saleProducts.map(transformProduct);
+  const transformedAllProducts = allProducts.map(transformProduct);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="bg-background-light dark:bg-dark-bg transition-colors duration-200">
+      <section className="py-4 sm:py-6 lg:py-8">
+        <div className="container-custom space-y-6 sm:space-y-8 lg:space-y-10">
+          {/* HÀNG TRÊN: Sidebar + News Carousel */}
+          <div className="flex gap-4 items-stretch">
+            {/* SIDEBAR - ẩn trên mobile */}
+            <div className="hidden lg:block w-[280px] flex-shrink-0">
+              <HomepageClient />
+            </div>
+
+            {/* News Carousel Banner - Tin tức hot */}
+            <div className="flex-1 min-w-0">
+              <NewsCarousel />
+            </div>
+          </div>
+
+          {/* HÀNG DƯỚI: các section sản phẩm – full chiều ngang phần content */}
+          <div>
+            {/* SẢN PHẨM HOT */}
+            {transformedHotProducts.length > 0 && (
+              <div className="mb-8 sm:mb-10 lg:mb-12">
+                <div className="flex items-center justify-between mb-4 sm:mb-6">
+                  <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-800 dark:text-gray-100 flex items-center gap-2">
+                    <span className="w-1 h-6 sm:h-8 bg-accent-red" />
+                    SẢN PHẨM HOT
+                  </h2>
+                  <Link
+                    href="/products?featured=true"
+                    className="text-accent-red hover:underline flex items-center gap-1 font-semibold text-sm sm:text-base"
+                  >
+                    Xem tất cả <ChevronRight size={16} />
+                  </Link>
+                </div>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5 gap-2 sm:gap-3 lg:gap-4">
+                  {transformedHotProducts.map((product) => (
+                    <ProductCard key={product.id} {...product} />
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* HÀNG MỚI VỀ */}
+            {transformedNewProducts.length > 0 && (
+              <div className="mb-8 sm:mb-10 lg:mb-12">
+                <div className="flex items-center justify-between mb-4 sm:mb-6">
+                  <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-800 dark:text-gray-100 flex items-center gap-2">
+                    <span className="w-1 h-6 sm:h-8 bg-green-500" />
+                    HÀNG MỚI VỀ
+                  </h2>
+                  <Link
+                    href="/products?sort=createdAt&order=desc"
+                    className="text-accent-red hover:underline flex items-center gap-1 font-semibold text-sm sm:text-base"
+                  >
+                    Xem tất cả <ChevronRight size={16} />
+                  </Link>
+                </div>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5 gap-2 sm:gap-3 lg:gap-4">
+                  {transformedNewProducts.map((product) => (
+                    <ProductCard key={product.id} {...product} />
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* ĐANG GIẢM GIÁ */}
+            {transformedSaleProducts.length > 0 && (
+              <div className="mb-8 sm:mb-10 lg:mb-12">
+                <div className="flex items-center justify-between mb-4 sm:mb-6">
+                  <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-800 dark:text-gray-100 flex items-center gap-2">
+                    <span className="w-1 h-6 sm:h-8 bg-orange-500" />
+                    ĐANG GIẢM GIÁ
+                  </h2>
+                  <Link
+                    href="/products"
+                    className="text-accent-red hover:underline flex items-center gap-1 font-semibold text-sm sm:text-base"
+                  >
+                    Xem tất cả <ChevronRight size={16} />
+                  </Link>
+                </div>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5 gap-2 sm:gap-3 lg:gap-4">
+                  {transformedSaleProducts.map((product) => (
+                    <ProductCard key={product.id} {...product} />
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* TẤT CẢ SẢN PHẨM */}
+            <div className="mb-4">
+              <div className="flex items-center justify-between mb-4 sm:mb-6">
+                <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-800 dark:text-gray-100 flex items-center gap-2">
+                  <span className="w-1 h-6 sm:h-8 bg-primary" />
+                  TẤT CẢ SẢN PHẨM
+                </h2>
+                <Link
+                  href="/products"
+                  className="text-accent-red hover:underline flex items-center gap-1 font-semibold text-sm sm:text-base"
+                >
+                  Xem tất cả <ChevronRight size={16} />
+                </Link>
+              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5 gap-2 sm:gap-3 lg:gap-4">
+                {transformedAllProducts.map((product) => (
+                  <ProductCard key={product.id} {...product} />
+                ))}
+              </div>
+              {products.length === 0 && (
+                <div className="text-center py-10 text-gray-500 dark:text-gray-400">
+                  Chưa có sản phẩm nào. Vui lòng thêm sản phẩm từ trang quản trị.
+                </div>
+              )}
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </section>
     </div>
   );
 }
