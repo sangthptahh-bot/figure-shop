@@ -26,5 +26,5 @@ npm run db:seed ( dữ liệu mẫu )
 npm run dev
 
 ## 🔑 Admin account
-- username: admin2@gmail.com
-- password: 12345678
+- username: admin@otakushop.local
+- password: ChangeMeNow!
