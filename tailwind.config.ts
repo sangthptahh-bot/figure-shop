@@ -11,27 +11,27 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#FFB6C1',
-          light: '#FFC0CB',
-          dark: '#FF8FAB',
-          50: '#FFE5ED',
-          100: '#FFD5DC',
+          DEFAULT: '#41aff4', // phần trên cùng 
+          light: '#4b5cef',   // nút tìm kiếm 
+          dark: '#4d00f3',   // nút tìm kiếm sau khi di chuột vào
+          50: '#a8bbf1',
+          100: '#c4cdf1',
         },
-        'accent-red': '#FF4458',
+        'accent-red': '#2100f5', // hover nút
         accent: {
-          red: '#FF4444',
-          orange: '#FF9966',
-          pink: '#FFB6C1',
-          coral: '#FFE5ED',
+          red: '#ff3f3f',  // mấy chữ nhỏ như 
+          orange: '#f48907',
+          pink: '#b6e9ff',
+          coral: '#c8d2ff',
         },
         text: {
-          dark: '#333333',
+          dark: '#333333', // màu chữ
           gray: '#666666',
         },
         background: {
-          light: '#FFF5F7',     // Light pastel pink for light mode
+          light: '#d9e4fa',     // Light pastel pink for light mode
           white: '#FFFFFF',
-          pink: '#FFF0F3',      // Slightly lighter pink
+          pink: '#cad5f3',      // Slightly lighter pink
         },
         // Dark mode specific colors
         dark: {
