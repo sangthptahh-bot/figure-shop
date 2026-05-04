@@ -1,0 +1,72 @@
+# Database Configuration
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=otakushop
+DB_USER=postgres
+DB_PASSWORD=postgres
+
+# Prisma Database URL
+DATABASE_URL=postgresql://postgres:postgres@localhost:5432/otakushop?schema=public
+
+# JWT Configuration
+JWT_SECRET=your-super-secret-jwt-key-change-in-production
+JWT_EXPIRES_IN=7d
+
+# Admin Configuration
+# IMPORTANT: Change these default values in production!
+ADMIN_USERNAME=admin@otakushop.local
+ADMIN_PASSWORD=ChangeMeNow!
+ADMIN_DISPLAY_NAME=Quản trị viên
+
+# Application Configuration
+NODE_ENV=development
+NEXT_PUBLIC_API_URL=http://localhost:3000
+
+# Redis Configuration (optional - falls back to in-memory if not set)
+# For production, use Redis for distributed rate limiting and caching
+REDIS_HOST=localhost
+REDIS_PORT=6379
+REDIS_PASSWORD=
+REDIS_DB=0
+# Or use a connection URL (takes precedence over individual settings)
+# REDIS_URL=redis://:password@localhost:6379/0
+
+# UploadThing Configuration (for file uploads)
+UPLOADTHING_SECRET=your-uploadthing-secret
+UPLOADTHING_APP_ID=your-uploadthing-app-id
+
+# Email Configuration (Gmail)
+# For Gmail: Enable "Less secure app access" or use App Password
+# https://myaccount.google.com/apppasswords
+EMAIL_USER=tuanduongtempproject@gmail.com
+EMAIL_PASS=zqbrevbqffldbwzt
+
+# App URL (for email verification links)
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+
+# VNPAY Configuration (Sandbox)
+VNP_TMN_CODE=1VS6WLL8
+VNP_HASH_SECRET=ZH8EZB12RLWUPDJTX3TPVTB89T4OXKYA
+VNP_URL=https://sandbox.vnpayment.vn/paymentv2/vpcpay.html
+VNP_RETURN_URL=http://localhost:3000/api/payment/vnpay/return
+VNP_IPN_URL=http://localhost:3000/api/payment/vnpay/ipn
+
+# MoMo Configuration (Sandbox)
+# Register at: https://business.momo.vn/
+MOMO_PARTNER_CODE=your-partner-code
+MOMO_ACCESS_KEY=your-access-key
+MOMO_SECRET_KEY=your-secret-key
+MOMO_ENDPOINT=https://test-payment.momo.vn/v2/gateway/api/create
+MOMO_IPN_URL=http://localhost:3000/api/payment/momo/ipn
+MOMO_REDIRECT_URL=http://localhost:3000/api/payment/momo/callback
+
+# GHN (Giao Hang Nhanh) Configuration
+# Register at: https://khachhang.ghn.vn/
+GHN_TOKEN=your-ghn-token
+GHN_SHOP_ID=your-shop-id
+GHN_API_URL=https://dev-online-gateway.ghn.vn
+GHN_SHOP_DISTRICT_ID=1454
+GHN_SHOP_WARD_CODE=21012
+GHN_SHOP_NAME=Otaku Shop
+GHN_SHOP_PHONE=0123456789
+GHN_SHOP_ADDRESS=123 Đường ABC, Quận 1, TP.HCM
