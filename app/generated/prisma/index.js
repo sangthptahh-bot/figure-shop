@@ -530,7 +530,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "E:\\vs code\\otaku-clean\\app\\generated\\prisma",
+      "value": "E:\\vs code\\otaku-shop\\app\\generated\\prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -544,11 +544,12 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "E:\\vs code\\otaku-clean\\prisma\\schema.prisma",
+    "sourceFilePath": "E:\\vs code\\otaku-shop\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": null
+    "rootEnvPath": null,
+    "schemaEnvPath": "../../../.env"
   },
   "relativePath": "../../../prisma",
   "clientVersion": "6.17.1",
@@ -557,7 +558,6 @@ const config = {
     "db"
   ],
   "activeProvider": "postgresql",
-  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
