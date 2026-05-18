@@ -10,8 +10,6 @@ npm install
 xong cop từ file .env.example sang file .env
 
 
-
-
 ### 4 Khởi động Khởi động PostgreSQL
 Win + R → services.msc
 tìm PostgreSQL chuột phải start ( status phải là running)
