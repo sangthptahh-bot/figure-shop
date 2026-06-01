@@ -529,7 +529,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "E:\\vs code\\otaku-shop\\app\\generated\\prisma",
+      "value": "E:\\vs code\\figure-shop\\app\\generated\\prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -543,7 +543,7 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "E:\\vs code\\otaku-shop\\prisma\\schema.prisma",
+    "sourceFilePath": "E:\\vs code\\figure-shop\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
