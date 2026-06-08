@@ -833,7 +833,7 @@ Thông số:
       price: 520000,
       stockQuantity: 10,
       images: [
-        "https://japanworld.it/143090-large_default/banpresto-dragon-ball-super-grandista-son-goku-ultra-instinct-omen-iii.jpg",
+        "https://s.pacn.ws/1/p/1fd/-dragon-ball-dragon-ball-super-grandista-goku-omen-of-ultra-ins-924661.1.jpg?v=tdgvps&width=600",
       ],
       categoryId: categories["prize-figures"],
       brandId: brands["bandai-spirits"],
