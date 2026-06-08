@@ -560,7 +560,7 @@ Thông số:
       price: 820000,
       stockQuantity: 18,
       images: [
-        "https://placehold.co/600x600/EF4444/FFF?text=Nendoroid+Tanjiro",
+        "https://m.media-amazon.com/images/I/51EGwY7STuL._AC_SY879_.jpg",
       ],
       categoryId: categories["nendoroid"],
       brandId: brands["good-smile-company"],
@@ -580,7 +580,9 @@ Thông số:
 - Đặc biệt: có thể biến hình thu nhỏ!`,
       price: 850000,
       stockQuantity: 15,
-      images: ["https://placehold.co/600x600/EC4899/FFF?text=Nendoroid+Nezuko"],
+      images: [
+        "https://sogestore.vn/wp-content/uploads/2025/09/sogestore_1194-Nendoroid-Nezuko-Kamado-1.webp",
+      ],
       categoryId: categories["nendoroid"],
       brandId: brands["good-smile-company"],
       featured: false,
@@ -598,7 +600,9 @@ Thông số:
 - Phiên bản mới nhất 2024!`,
       price: 920000,
       stockQuantity: 12,
-      images: ["https://placehold.co/600x600/FBBF24/FFF?text=Nendoroid+Gear5"],
+      images: [
+        "https://images.cults3d.com/KXqVrT7b17Hd4ufBzUsHmT8gTD4=/516x516/filters:no_upscale():format(webp)/https://fbi.cults3d.com/uploaders/17037761/illustration-file/316152e7-d6e3-4206-af9b-6b7f10a90687/20-may-2025%2C-10_19_13-p.m.png",
+      ],
       categoryId: categories["nendoroid"],
       brandId: brands["good-smile-company"],
       featured: true,
@@ -617,7 +621,9 @@ Thông số:
 - Hololive Official License`,
       price: 880000,
       stockQuantity: 10,
-      images: ["https://placehold.co/600x600/60A5FA/FFF?text=Nendoroid+Gura"],
+      images: [
+        "https://bizweb.dktcdn.net/100/503/392/products/1-853e8e2b-c97c-4af8-a724-0d3be2424b4e.jpg?v=1738514381753",
+      ],
       categoryId: categories["nendoroid"],
       brandId: brands["good-smile-company"],
       featured: false,
@@ -635,7 +641,9 @@ Thông số:
 - Anime hit 2023!`,
       price: 850000,
       stockQuantity: 14,
-      images: ["https://placehold.co/600x600/EC4899/FFF?text=Nendoroid+Bocchi"],
+      images: [
+        "https://sogestore.vn/wp-content/uploads/2025/09/sogestore_2069-Nendoroid-Hitori-Gotoh-1.webp",
+      ],
       categoryId: categories["nendoroid"],
       brandId: brands["good-smile-company"],
       featured: true,
@@ -656,7 +664,9 @@ Thông số:
 - Đi kèm: Dragon Slayer, cánh tay máy, crossbow`,
       price: 1850000,
       stockQuantity: 6,
-      images: ["https://placehold.co/600x600/1F2937/FFF?text=Figma+Guts"],
+      images: [
+        "https://bizweb.dktcdn.net/100/503/392/products/1-09d88e79-b6ec-49fe-8072-bd728009dcfe.jpg?v=1706112330287",
+      ],
       categoryId: categories["figma"],
       brandId: brands["max-factory"],
       featured: false,
@@ -674,7 +684,9 @@ Thông số:
 - Bao gồm: Master Sword, Hylian Shield, paraglider`,
       price: 1650000,
       stockQuantity: 8,
-      images: ["https://placehold.co/600x600/22C55E/FFF?text=Figma+Link"],
+      images: [
+        "https://resize.cdn.otakumode.com/ex/700.933/shop/product/23e0024f433b44318e81ff843addb7d7.jpg",
+      ],
       categoryId: categories["figma"],
       brandId: brands["max-factory"],
       featured: true,
@@ -692,7 +704,10 @@ Thông số:
 - Bao gồm: micro, leek, nhiều biểu cảm`,
       price: 1450000,
       stockQuantity: 15,
-      images: ["https://placehold.co/600x600/06B6D4/FFF?text=Figma+Miku"],
+      images: [
+        "https://images-na.ssl-images-amazon.com/images/I/51voW5sWPDL.jpg",
+        "https://images-na.ssl-images-amazon.com/images/I/51hLdn6EpOL.jpg",
+      ],
       categoryId: categories["figma"],
       brandId: brands["max-factory"],
       featured: false,
@@ -713,7 +728,9 @@ Thông số:
 - Giá tốt cho người mới sưu tầm!`,
       price: 480000,
       stockQuantity: 25,
-      images: ["https://placehold.co/600x600/DC2626/FFF?text=PUP+Denji"],
+      images: [
+        "https://product.hstatic.net/1000105776/product/screen_shot_2022-11-08_at_12.53.23_8656e9ca334542f2becb3028129a41e3_master.png",
+      ],
       categoryId: categories["pop-up-parade"],
       brandId: brands["good-smile-company"],
       featured: false,
@@ -731,7 +748,9 @@ Thông số:
 - Giá tốt cho collector mới!`,
       price: 450000,
       stockQuantity: 30,
-      images: ["https://placehold.co/600x600/FBBF24/FFF?text=PUP+Zenitsu"],
+      images: [
+        "https://www.goodsmile.com/gsc-webrevo-sdk-storage-prd/product/image/product/20210524/11265/85237/large/90919ed2808016dc820f8a38c1d7b5f7.jpg",
+      ],
       categoryId: categories["pop-up-parade"],
       brandId: brands["good-smile-company"],
       featured: false,
@@ -749,7 +768,9 @@ Thông số:
 - Anime hit 2024!`,
       price: 480000,
       stockQuantity: 18,
-      images: ["https://placehold.co/600x600/A855F7/FFF?text=PUP+Fern"],
+      images: [
+        "https://sogestore.vn/wp-content/uploads/2025/04/sogestore_POP-UP-PARADE-Fern.webp",
+      ],
       categoryId: categories["pop-up-parade"],
       brandId: brands["good-smile-company"],
       featured: true,
@@ -768,7 +789,9 @@ Thông số:
 - Chiều cao: 17cm`,
       price: 450000,
       stockQuantity: 22,
-      images: ["https://placehold.co/600x600/1F2937/FFF?text=PUP+Loid"],
+      images: [
+        "https://www.goodsmile.com/gsc-webrevo-sdk-storage-prd/product/image/product/20220926/13302/104847/large/dc77cf43a320951c5539716c307f1dca.jpg",
+      ],
       categoryId: categories["pop-up-parade"],
       brandId: brands["good-smile-company"],
       featured: false,
@@ -789,7 +812,9 @@ Thông số:
 - Prize Figure chất lượng cao`,
       price: 380000,
       stockQuantity: 15,
-      images: ["https://placehold.co/600x600/60A5FA/FFF?text=Taito+Rem"],
+      images: [
+        "https://freakfantasyshop.es/wp-content/uploads/2023/07/9ad52c03-689b-4b2d-af7f-98ad64ad3791_p_01_ja.jpg",
+      ],
       categoryId: categories["prize-figures"],
       brandId: brands["taito"],
       featured: false,
@@ -807,7 +832,9 @@ Thông số:
 - Nhà sản xuất: Banpresto`,
       price: 520000,
       stockQuantity: 10,
-      images: ["https://placehold.co/600x600/3B82F6/FFF?text=Grandista+Goku"],
+      images: [
+        "https://japanworld.it/143090-large_default/banpresto-dragon-ball-super-grandista-son-goku-ultra-instinct-omen-iii.jpg",
+      ],
       categoryId: categories["prize-figures"],
       brandId: brands["bandai-spirits"],
       featured: true,
@@ -825,7 +852,9 @@ Thông số:
 - Limited yearly edition`,
       price: 420000,
       stockQuantity: 8,
-      images: ["https://placehold.co/600x600/06B6D4/FFF?text=Sega+Miku"],
+      images: [
+        "https://www.goodsmile.com/gsc-webrevo-sdk-storage-prd/product/image/36455/4tFJ1RvSL5xDZnEebN8Vza6QdsCAXcKY.jpg",
+      ],
       categoryId: categories["prize-figures"],
       brandId: brands["sega"],
       featured: false,
@@ -842,7 +871,9 @@ Thông số:
 - Chiều cao: 22cm`,
       price: 450000,
       stockQuantity: 12,
-      images: ["https://placehold.co/600x600/7C3AED/FFF?text=FuRyu+Sukuna"],
+      images: [
+        "https://cdn.weeboo.vn/wp-content/uploads/2026/05/e3a0679f-e2d5-4902-a757-b2d13e79fe37_bfdfbe3cb2bb4e01a28869b21b39aa9c_master-1.jpg",
+      ],
       categoryId: categories["prize-figures"],
       brandId: brands["furyu"],
       featured: false,
@@ -863,7 +894,9 @@ Thông số:
 - Bao gồm: Twin Buster Rifle, beam saber`,
       price: 680000,
       stockQuantity: 20,
-      images: ["https://placehold.co/600x600/3B82F6/FFF?text=RG+Wing+Zero"],
+      images: [
+        "https://bizweb.dktcdn.net/thumb/grande/100/535/699/products/z6649366646683-c14c342fa697a92df9afc9b10cae1cfd.jpg?v=1757148324893",
+      ],
       categoryId: categories["gunpla-mecha"],
       brandId: brands["bandai-spirits"],
       featured: true,
@@ -882,7 +915,9 @@ Thông số:
 - Ver.Ka design by Hajime Katoki`,
       price: 1450000,
       stockQuantity: 8,
-      images: ["https://placehold.co/600x600/FAFAFA/333?text=MG+Unicorn"],
+      images: [
+        "https://product.hstatic.net/200000326537/product/157_725_s_g3fhfcogdmtob251imte5hv3p495_ae012ff8999b477db061b35f814fd6db_master.jpg",
+      ],
       categoryId: categories["gunpla-mecha"],
       brandId: brands["bandai-spirits"],
       featured: true,
@@ -903,7 +938,7 @@ Thông số:
       price: 5800000,
       stockQuantity: 3,
       images: [
-        "https://placehold.co/600x600/FBBF24/FFF?text=PG+Strike+Freedom",
+        "https://images-na.ssl-images-amazon.com/images/I/615mCu5w+aL.jpg",
       ],
       categoryId: categories["gunpla-mecha"],
       brandId: brands["bandai-spirits"],
@@ -924,7 +959,9 @@ Thông số:
 - Anime mới 2023-2024`,
       price: 380000,
       stockQuantity: 25,
-      images: ["https://placehold.co/600x600/EC4899/FFF?text=HG+Aerial"],
+      images: [
+        "https://bizweb.dktcdn.net/100/479/026/products/eeb35a77322b9d19b62b4d4e804800da-1667786585457.jpg?v=1679025827323",
+      ],
       categoryId: categories["gunpla-mecha"],
       brandId: brands["bandai-spirits"],
       featured: false,
@@ -945,7 +982,9 @@ Thông số:
 - Sanrio Official`,
       price: 350000,
       stockQuantity: 20,
-      images: ["https://placehold.co/600x600/FAFAFA/333?text=Pochacco"],
+      images: [
+        "https://pigrabbit.es/cdn/shop/files/peluche-pochacco-30cm-pig-rabbit-shop-85339.jpg?v=1773177734&width=640",
+      ],
       categoryId: categories["plush-mascot"],
       featured: false,
       preorderStatus: "NONE" as const,
@@ -962,7 +1001,9 @@ Thông số:
 - Official merchandise`,
       price: 420000,
       stockQuantity: 15,
-      images: ["https://placehold.co/600x600/EC4899/FFF?text=Anya+Plush"],
+      images: [
+        "https://media.karousell.com/media/photos/products/2024/3/27/anya_forger_spyfamily_big_plus_1711554631_e7b26297_progressive.jpg",
+      ],
       categoryId: categories["plush-mascot"],
       featured: true,
       preorderStatus: "NONE" as const,
@@ -983,7 +1024,7 @@ Thông số:
       price: 1250000,
       comparePrice: 1500000,
       stockQuantity: 10,
-      images: ["https://placehold.co/600x600/7C3AED/FFF?text=JJK+Box+Set"],
+      images: ["https://m.media-amazon.com/images/I/81fgp4Q3F8L._SL1500_.jpg"],
       categoryId: categories["manga-artbook"],
       featured: true,
       preorderStatus: "NONE" as const,
@@ -1000,7 +1041,9 @@ Thông số:
 - Trang: 160 trang màu`,
       price: 580000,
       stockQuantity: 8,
-      images: ["https://placehold.co/600x600/EC4899/FFF?text=SpyxFamily+Art"],
+      images: [
+        "https://cdn1.fahasa.com/media/catalog/product/9/7/9784991322402b.jpg",
+      ],
       categoryId: categories["manga-artbook"],
       featured: false,
       preorderStatus: "NONE" as const,
@@ -1019,7 +1062,7 @@ Thông số:
       price: 1150000,
       comparePrice: 1380000,
       stockQuantity: 6,
-      images: ["https://placehold.co/600x600/EF4444/FFF?text=KnY+Box+Set"],
+      images: ["https://m.media-amazon.com/images/I/810Isi4YasS._SL1500_.jpg"],
       categoryId: categories["manga-artbook"],
       featured: true,
       preorderStatus: "NONE" as const,
@@ -1388,14 +1431,14 @@ Thông số:
   for (const review of reviewsData) {
     await prisma.review.create({ data: review });
   }
-  console.log(`✅ Created ${reviewsData.length} sample reviews\n`);
+  console.log(`Created ${reviewsData.length} sample reviews\n`);
 
   // ===== 12. ANNOUNCEMENTS =====
-  console.log("📢 Creating announcements...");
+  console.log("Creating announcements...");
   await prisma.announcement.createMany({
     data: [
       {
-        title: "🎉 Chào mừng đến OtakuShop!",
+        title: "Chào mừng đến OtakuShop!",
         summary:
           "OtakuShop - Thiên đường Figure & Anime chính hãng tại Việt Nam",
         content:
@@ -1403,14 +1446,14 @@ Thông số:
         isActive: true,
       },
       {
-        title: "🚚 Freeship đơn từ 500k",
+        title: "Freeship đơn từ 500k",
         summary: "Miễn phí vận chuyển cho đơn hàng từ 500.000đ",
         content:
           "Áp dụng cho tất cả đơn hàng nội thành HCM và Hà Nội. Các tỉnh khác giảm 30k phí ship.",
         isActive: true,
       },
       {
-        title: "⏰ Pre-order mở đơn hàng tháng!",
+        title: "Pre-order mở đơn hàng tháng!",
         summary: "Đặt trước Figure mới nhất với giá ưu đãi",
         content:
           "Pre-order Figure chính hãng với giá sớm (Early Bird). Thanh toán trước 50%, còn lại khi hàng về. Đảm bảo có hàng cho bạn!",
