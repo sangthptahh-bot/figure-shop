@@ -32,8 +32,9 @@ createdb otakushop
 ```
 npx prisma generate
 npx prisma db push
-npx prisma db seed ( dữ liệu mẫu )
-```
+
+npx run seed ( dữ liệu mẫu )
+
 
 ### 7. Run project
 
