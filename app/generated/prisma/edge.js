@@ -529,11 +529,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-<<<<<<< HEAD
       "value": "D:\\project\\figure-shop\\app\\generated\\prisma",
-=======
-      "value": "E:\\vs code\\figure-shop\\app\\generated\\prisma",
->>>>>>> cc4d501f87fac77ae9ffc0a7ad71c188ca67eacb
       "fromEnvVar": null
     },
     "config": {
@@ -547,11 +543,7 @@ const config = {
       }
     ],
     "previewFeatures": [],
-<<<<<<< HEAD
     "sourceFilePath": "D:\\project\\figure-shop\\prisma\\schema.prisma",
-=======
-    "sourceFilePath": "E:\\vs code\\figure-shop\\prisma\\schema.prisma",
->>>>>>> cc4d501f87fac77ae9ffc0a7ad71c188ca67eacb
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
@@ -565,7 +557,6 @@ const config = {
     "db"
   ],
   "activeProvider": "postgresql",
-  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
