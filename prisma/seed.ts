@@ -1444,6 +1444,9 @@ Thông số:
         content:
           "Chào mừng bạn đến với OtakuShop! Chúng tôi chuyên cung cấp các sản phẩm Figure, Nendoroid, Gunpla chính hãng từ Nhật Bản. Đảm bảo 100% authentic, đóng gói cẩn thận, giao hàng toàn quốc.",
         isActive: true,
+        isHot: true,
+        imageUrl:
+          "https://cellphones.com.vn/sforum/wp-content/uploads/2022/12/hinh-nen-anime-tet-2-1.jpg",
       },
       {
         title: "Freeship đơn từ 500k",
@@ -1458,6 +1461,8 @@ Thông số:
         content:
           "Pre-order Figure chính hãng với giá sớm (Early Bird). Thanh toán trước 50%, còn lại khi hàng về. Đảm bảo có hàng cho bạn!",
         isActive: true,
+        isHot: true,
+        imageUrl: "https://i.ytimg.com/vi/_dO4uT4FBsM/maxresdefault.jpg",
       },
     ],
   });
