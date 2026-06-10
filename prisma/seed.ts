@@ -1438,11 +1438,11 @@ Thông số:
   await prisma.announcement.createMany({
     data: [
       {
-        title: "Chào mừng đến OtakuShop!",
+        title: "Chào mừng đến FigureShop!",
         summary:
-          "OtakuShop - Thiên đường Figure & Anime chính hãng tại Việt Nam",
+          "FigureShop - Thiên đường Figure & Anime chính hãng tại Việt Nam",
         content:
-          "Chào mừng bạn đến với OtakuShop! Chúng tôi chuyên cung cấp các sản phẩm Figure, Nendoroid, Gunpla chính hãng từ Nhật Bản. Đảm bảo 100% authentic, đóng gói cẩn thận, giao hàng toàn quốc.",
+          "Chào mừng bạn đến với FigureShop! Chúng tôi chuyên cung cấp các sản phẩm Figure, Nendoroid, Gunpla chính hãng từ Nhật Bản. Đảm bảo 100% authentic, đóng gói cẩn thận, giao hàng toàn quốc.",
         isActive: true,
         isHot: true,
         imageUrl:
@@ -1452,7 +1452,7 @@ Thông số:
         title: "Freeship đơn từ 500k",
         summary: "Miễn phí vận chuyển cho đơn hàng từ 500.000đ",
         content:
-          "Áp dụng cho tất cả đơn hàng nội thành HCM và Hà Nội. Các tỉnh khác giảm 30k phí ship.",
+          "Áp dụng cho tất cả đơn hàng nội thành Hà Nội và HCM. Các tỉnh khác giảm 30k phí ship.",
         isActive: true,
       },
       {
