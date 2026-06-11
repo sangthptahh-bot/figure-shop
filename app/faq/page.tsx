@@ -49,8 +49,8 @@ How to order on the website? Follow these steps:
       category: 'ordering',
       question: 'Tôi có thể hủy hoặc thay đổi đơn hàng không?',
       answer: `Bạn có thể hủy hoặc thay đổi đơn hàng trong vòng 24 giờ sau khi đặt hàng bằng cách liên hệ với bộ phận chăm sóc khách hàng qua:
-- Hotline: 0389836514
-- Email: tuanduongtempproject@gmail.com
+- Hotline: 0355824979
+- Email: sangthptahh@gmail.com
 - Facebook Messenger
 
 Sau 24 giờ, nếu đơn hàng đã được xử lý, việc hủy có thể phát sinh phí.

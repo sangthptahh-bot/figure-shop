@@ -94,8 +94,8 @@ export default function PrivacyPolicyPage() {
             <h2>7. Liên hệ</h2>
             <p>
               Nếu có thắc mắc về chính sách bảo mật, vui lòng liên hệ:<br />
-              Email: <strong>tuanduongtempproject@gmail.com</strong><br />
-              Hotline: <strong>0389 836 514</strong>
+              Email: <strong>sangthptahh@gmail.com</strong><br />
+              Hotline: <strong>0355824979</strong>
             </p>
 
             <p className="text-sm text-gray-500 italic">

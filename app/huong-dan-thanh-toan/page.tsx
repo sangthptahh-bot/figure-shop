@@ -114,7 +114,7 @@ export default function PaymentGuidePage() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="w-2 h-2 bg-pink-500 rounded-full mt-2 flex-shrink-0"></span>
-                <span>Mọi thắc mắc về thanh toán, vui lòng liên hệ hotline: <strong>0389 836 514</strong></span>
+                <span>Mọi thắc mắc về thanh toán, vui lòng liên hệ hotline: <strong>0355824979</strong></span>
               </li>
             </ul>
           </div>

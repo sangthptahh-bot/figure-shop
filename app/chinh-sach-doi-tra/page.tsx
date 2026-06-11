@@ -48,7 +48,7 @@ export default function ReturnPolicyPage() {
 
             <h2>2. Quy trình đổi trả</h2>
             <ol>
-              <li>Liên hệ hotline <strong>0389 836 514</strong> hoặc email <strong>tuanduongtempproject@gmail.com</strong></li>
+              <li>Liên hệ hotline <strong>0355824979</strong> hoặc email <strong>sangthptahh@gmail.com</strong></li>
               <li>Cung cấp mã đơn hàng, hình ảnh/video sản phẩm lỗi</li>
               <li>Chờ xác nhận từ nhân viên CSKH (trong vòng 24h)</li>
               <li>Gửi trả sản phẩm theo hướng dẫn</li>

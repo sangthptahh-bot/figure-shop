@@ -289,16 +289,16 @@ export default function ShippingCalculatorPage() {
               </p>
               <div className="flex flex-col gap-2">
                 <a
-                  href="tel:0389836514"
+                  href="tel:0355824979"
                   className="bg-accent-red text-white px-4 py-2 rounded-lg font-semibold hover:bg-red-600 transition-colors"
                 >
-                  Hotline: 0389 836 514
+                  Hotline: 0355824979
                 </a>
                 <a
-                  href="mailto:tuanduongtempproject@gmail.com"
+                  href="mailto:sangthptahh@gmail.com"
                   className="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Email: tuanduongtempproject@gmail.com
+                  Email: sangthptahh@gmail.com
                 </a>
               </div>
             </div>

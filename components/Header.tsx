@@ -123,7 +123,7 @@ export default function Header() {
             {/* Logo */}
             <Link href="/" className="flex-shrink-0" aria-label="Trang chủ Otaku Shop">
               <div className="flex items-center gap-1">
-                <span className="text-xl lg:text-3xl font-bold text-accent-red">DN</span>
+                <span className="text-xl lg:text-3xl font-bold text-accent-red">HAU</span>
                 <span className="text-lg lg:text-2xl font-bold text-gray-800 dark:text-white">FIGURE</span>
               </div>
             </Link>
